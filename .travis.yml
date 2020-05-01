@@ -15,6 +15,7 @@ cache:
 
 before_install:
   # initialize databases
+  - mysql --version
   - mysql -e 'CREATE DATABASE mdm_admin_test;'
   
 install:
@@ -33,7 +34,6 @@ install:
 
 before_script:
   - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-  - mysql --version
   
 script:
   - |
