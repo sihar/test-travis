@@ -19,7 +19,7 @@
         "yiisoft/yii2": "~2.0.13"
     },
     "require-dev": {
-        "codeception/codeception": "2.3.7"
+        "codeception/codeception": "2.0.16"
     },
     "suggest": {
         "yiisoft/yii2-bootstrap": "Used when using layout 'left-menu', 'right-menu' or 'top-menu'"
