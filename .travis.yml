@@ -15,6 +15,7 @@ cache:
 
 install:
 #  - travis_retry composer self-update && composer --version
+  - travis_retry composer clear-cache
   - travis_retry composer --version
   - travis_retry composer global require fxp/composer-asset-plugin --no-plugins
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
