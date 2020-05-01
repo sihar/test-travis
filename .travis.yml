@@ -13,6 +13,10 @@ cache:
   directories:
     - $HOME/.composer/cache
 
+before_install:
+  # initialize databases
+  - mysql -e 'CREATE DATABASE mdm_admin_test;';
+  
 install:
   - travis_retry composer self-update && composer --version
   - travis_retry composer --version
@@ -30,9 +34,6 @@ install:
 before_script:
   - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - mysql --version
-
-  # initialize databases
-  - mysql -e 'CREATE DATABASE mdm_admin_test;';
   
 script:
   - |
