@@ -15,7 +15,7 @@ cache:
 
 before_install:
   # initialize databases
-  - mysql -e 'CREATE DATABASE mdm_admin_test;';
+  - mysql -e 'CREATE DATABASE mdm_admin_test;'
   
 install:
   - travis_retry composer self-update && composer --version
