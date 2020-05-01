@@ -42,6 +42,10 @@
         "branch-alias": {
             "dev-1.0.master": "1.0.x-dev",
             "dev-master": "2.x-dev"
-        }
+        },
+	"asset-vcs-driver-options": {
+            "github-no-api": true
+        },
+        "asset-pattern-skip-version": "(-build|-patch)"
     }
 }
